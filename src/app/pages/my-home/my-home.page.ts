@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-my-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyHomePage implements OnInit {
 
-  constructor() { }
+  constructor(private menuController: MenuController) { }
 
   ngOnInit() {
   }
-
+  toggleMenu(){
+    console.log('desplegar menu');
+    this.menuController.toggle(); // Abre o cierra el menú desplegable
+  }
 }
