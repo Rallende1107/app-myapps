@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="centrado">
+    <ion-img src="assets/img-login.svg"></ion-img>
+
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input label="Usuario" labelPlacements="floating" [(ngModel)]="mdl_usuario" ></ion-input>
+    </ion-item>
+    <ion-item class="fondo input ion-margin-top boton" lines="none">
+      <ion-input type="password" label="Contraseña" labelPlacements="floating" [(ngModel)]="mdl_contrasena" ></ion-input>
+    </ion-item>
+
+    <ion-button class="degradado ion-margin-top boton" (click)="navegar()" expand="block"> Ingresar </ion-button>
+  
+    <ion-alert
+      [isOpen]="isAlertOpen"
+      header="Informacion"
+      message="Credenciales invalidas"
+      [buttons]="alertButtons"
+      (didDismiss) ="setOpen(false)"
+    ></ion-alert>
+  
+  </div>
+
+</ion-content>

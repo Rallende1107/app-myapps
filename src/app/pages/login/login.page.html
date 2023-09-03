@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="start">
+      <ion-button (click)="irAlInicio()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+
+<!-- navegar() -->
+
+<div class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingresar</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-img src="assets/images/log.webp" alt="..."></ion-img>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <form [formGroup]="formularioLogin">
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input placeholder="correo@duocuc.cl" type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </form>
+    </ion-card-content>
+
+    <div class="btnCards ion-margin-top">
+      <ion-button (click)="ingresar()" expand="block" class="btnSuccess ion-margin-top">
+        <ion-icon name="log-in-outline"></ion-icon>
+        <ion-label>Ingresar</ion-label>
+      </ion-button>
+
+      <ion-label>Si no Tienes una cuenta Registrate</ion-label>
+      <ion-button routerLink="/registro" expand="block" class="btnCancel ion-margin-top">
+
+        Registrarse
+      </ion-button>
+    </div>
+  </ion-card>
+</div>
+</ion-content>
+<!-- navegar() -->

@@ -25,27 +25,31 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-
 .degradado {
-    --background: linear-gradient(90deg, rgba(232,119,34,1) 0%, rgba(236,161,84,1) 50%);
+    --background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(186,29,247,1) 30%, rgba(0,212,255,1) 100%);
     --color: #FFFFFF;
-    text-align: center;
 
 }
 
-.btnSuccess {
-    --background: linear-gradient(90deg, rgba(67,176,42,1) 0%, rgba(161,216,132,1) 50%);
-    --color: #FFFFFF;
-    text-align: center;
-
-}
-.btnCancel {
-    --background: linear-gradient(90deg, rgba(213,0,50,1) 0%, rgba(255,88,93,1) 50%);
-    --color: #FFFFFF;
-    text-align: center;
+.fondo {
+    --background: #FFFFFF;
+    --color: #000000;
 
 }
 
-.btnCards{
-    text-align: center;
+.centrado {
+    margin-top: 20px;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input {
+    border: solid 2px #000000;
+    border-radius: 5px;
+}
+
+.boton{
+    height: 55px;
+
 }
