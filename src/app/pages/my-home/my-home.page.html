@@ -2,19 +2,28 @@
   <ion-toolbar>
     <!-- Reemplaza el botón de menú con el icono de menú hamburguesa -->
     <ion-buttons slot="start">
-      <ion-button (click)="toggleMenu()">
+      <ion-button>
         <ion-icon name="menu-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Inicio</ion-title>
+    <!-- <ion-title>Inicio</ion-title> -->
+    <ion-title>Inicio - {{ emailUsuario }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">myHome</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="ion-padding">
+    <ion-button routerLink="/cambio-contrasenia" expand="block" class="btnCancel ion-margin-top">
+      Cambia la Password
+    </ion-button>
+
+
+      <ion-button  expand="block" class="btnCancel ion-margin-top" (click)="salir()">
+        Salir
+      </ion-button>
+
+  </div>
+
 </ion-content>
