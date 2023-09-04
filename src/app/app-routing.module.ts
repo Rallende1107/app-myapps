@@ -27,6 +27,12 @@ const routes: Routes = [
     redirectTo: 'cambio-contrasenia',
     pathMatch: 'full'
   },
+  {
+    path: '**',
+    redirectTo: 'page404',
+    pathMatch: 'full'
+  },
+
 
   {
     path: 'inicio',
@@ -47,6 +53,10 @@ const routes: Routes = [
   {
     path: 'cambio-contrasenia',
     loadChildren: () => import('./pages/cambio-contrasenia/cambio-contrasenia.module').then( m => m.CambioContraseniaPageModule)
+  },
+  {
+    path: 'page404',
+    loadChildren: () => import('./pages/page404/page404.module').then( m => m.Page404PageModule)
   },
 
 ];
