@@ -34,7 +34,7 @@
 }
 
 .btnSuccess {
-    --background: linear-gradient(90deg, rgba(67,176,42,1) 0%, rgba(161,216,132,1) 50%);
+    --background: linear-gradient(90deg, rgba(67,176,42,1) 0%, rgb(45, 87, 23) 50%);
     --color: #FFFFFF;
     text-align: center;
 
@@ -48,4 +48,8 @@
 
 .btnCards{
     text-align: center;
+}
+
+.fondo{
+    --background:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
