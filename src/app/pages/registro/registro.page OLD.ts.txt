@@ -7,8 +7,6 @@ import {
 }  from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { TestService } from 'src/app/services/test.service';
-
 
 @Component({
   selector: 'app-registro',
@@ -20,8 +18,7 @@ export class RegistroPage implements OnInit {
 
   constructor(public fb: FormBuilder,
     public alertController : AlertController,
-    private router: Router, // Inyecta el router
-    private testService: TestService,
+    private router: Router // Inyecta el router
     ) {
     this.formularioRegistro = this.fb.group({
       'email' : new FormControl("", Validators.required),
@@ -66,9 +63,6 @@ export class RegistroPage implements OnInit {
 
     }
   }
-
-  
-
 
   irAlInicio() {
     this.router.navigate(['inicio']);

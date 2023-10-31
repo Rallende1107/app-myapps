@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="azul-oscuro">
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="centrado">
+    <ion-img src="assets/registro.svg"></ion-img>
+    <form>
+      <ion-item class="fondo input ion-margin-top" lines="none">
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input name="nombreUsuario" labelPlacement="floating" [(ngModel)]="nombreUsuario"></ion-input>
+      </ion-item>
+
+      <ion-item class="fondo input ion-margin-top" lines="none">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input name="correoElectronico" labelPlacement="floating" [(ngModel)]="correoElectronico"></ion-input>
+      </ion-item>
+
+      <ion-item class="fondo input ion-margin-top" lines="none">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" name="contrasena" labelPlacement="floating" [(ngModel)]="contrasena"></ion-input>
+      </ion-item>
+
+      <ion-item class="fondo input ion-margin-top" lines="none">
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input type="password" name="confirmarContrasena" labelPlacement="floating"
+          [(ngModel)]="confirmarContrasena"></ion-input>
+      </ion-item>
+
+
+      <ion-button expand="block" class="input-confirmar ion-margin-top boton"
+        (click)="registro()">Registrarse</ion-button>
+      <ion-button routerLink="/login" class="input-cancelar ion-margin-top boton" expand="block">Volver</ion-button>
+    </form>
+  </div>
+</ion-content>
+<<ion-alert [isOpen]="isAlertOpen" header="{{alertHeader}}" message="{{alertMessage}}" buttons="Aceptar"
+  (didDismiss)="isAlertOpen = false"></ion-alert>>

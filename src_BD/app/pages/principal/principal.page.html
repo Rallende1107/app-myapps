@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-app>
+      <ion-content class="ion-padding">
+        <menu></menu>
+      </ion-content>
+    </ion-app>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="fav()"> 
+        <ion-icon [color]="color" slot="icon-only" name="heart">
+      </ion-icon> </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="fondo">
+  <menu></menu>
+  <h1 class="titulo">Bienvenido {{ usuario }}</h1>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="assets/IA.svg" />
+    <ion-card-header>
+      <ion-card-title>Noticias IA</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Conoces las últimas novedades.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

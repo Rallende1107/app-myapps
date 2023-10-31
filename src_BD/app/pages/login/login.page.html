@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="azul-oscuro">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="centrado">
+    <ion-img src="assets/login1.svg"> </ion-img>
+
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input label="Usuario" labelPlacement="floating" [(ngModel)]="mdl_usuario"></ion-input>
+    </ion-item>
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input type="password" label="Contraseña" labelPlacement="floating" [(ngModel)]="mdl_contrasena"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="input-amarillo ion-margin-top boton" (click)="navegar()"> Ingresar </ion-button>
+
+    <ion-alert header="Información" message="Credenciales inválidas" [buttons]="alertButtons"
+      (didDismiss)="setOpen(false)"></ion-alert>
+    <div class="ion-text-center ion-margin-top">
+      <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a> |
+      <a routerLink="/registro">Registrarse</a>
+    </div>
+    <ion-item color="primary" color="warning" class="ion-margin-top">
+      <ion-label> CANTIDAD DE USUARIOS: {{ cantidad }}</ion-label>
+      
+    </ion-item>
+  </div>
+
+</ion-content>

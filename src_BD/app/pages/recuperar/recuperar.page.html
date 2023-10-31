@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="azul-oscuro">
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="centrado">
+    <ion-img src="assets/clave.svg"></ion-img>
+    <div class="ion-padding">
+      <form (ngSubmit)="recuperarContrasena()">
+        <ion-item>
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="nombreUsuario" required name="nombreUsuario"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="usuarioIngresado">
+          <ion-label position="floating">Nueva Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="nuevaContrasena" required name="nuevaContrasena"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="usuarioIngresado">
+          <ion-label position="floating">Confirmar Nueva Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="confirmarNuevaContrasena" required
+            name="confirmarNuevaContrasena"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" class="input-confirmar ion-margin-top boton" type="submit">Recuperar Contraseña</ion-button>
+        <ion-button routerLink="/login" class="input-cancelar ion-margin-top boton" expand="block">Volver</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>
+<<ion-alert [isOpen]="isAlertOpen" header="{{alertHeader}}" message="{{alertMessage}}" buttons="Aceptar"
+  (didDismiss)="isAlertOpen = false"></ion-alert>>

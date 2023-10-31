@@ -1,0 +1,18 @@
+Node =  v20.9.0
+NPM = v10.1.0
+ionic = v7.1.1
+JDK = v17
+
+Comandos SQLite
+$ npm install cordova-sqlite-storage
+$ npm install @awesome-cordova-plugins/sqlite
+$ ionic cap sync
+--C:\Users\renea\AppData\Local\Android\Sdk\platforms\android-33
+Comandos AndroidStudio
+npm install @capacitor/android
+npm install @capacitor/android --force
+npx cap add android
+
+Ejecutar en android Studio
+npx cap run android
+ionic cap run android -l --external
