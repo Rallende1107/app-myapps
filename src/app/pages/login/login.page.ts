@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
         console.log('credeciales invalidas')
         const alert = await this.alertController.create({
           header: 'Datos incorrectos',
-          message: 'Los datos ingresados no se eneucntras registrasdos',
+          message: 'Los datos ingresados no se encuentran registrados',
           buttons: ['OK']
         });
         await alert.present();
@@ -59,6 +59,13 @@ export class LoginPage implements OnInit {
       }
 
     } else {
+       const alert = await this.alertController.create({
+          header: 'Datos incorrectos',
+          message: 'Los datos ingresados no se encuentran registrados',
+          buttons: ['OK']
+        });
+        await alert.present();
+        return;
       console.log('No se encontró un usuario en el almacenamiento local');
     }
 
